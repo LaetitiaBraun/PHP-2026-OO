@@ -35,5 +35,6 @@ class User
         echo $this->name . ' (' . $this->email . ')';
     }
 }
+
 $user = new User('Aline', 'aline@example.com');
 $user->afficher();
