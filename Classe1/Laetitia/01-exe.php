@@ -1,4 +1,6 @@
 <?php
+require_once "01-bonus/Playlist.php";
+// require_once "01-bonus/Chanson.php";
 // Procédural 0.1
 // ── Version 1 : avec un tableau (ce que vous savez déjà faire)
 $chanson = [
@@ -41,8 +43,9 @@ echo $chanson2->titre . ' — ' . $chanson2->artiste . ' ('.$chanson2->duree.' s
 echo "$chanson3->titre — $chanson3->artiste ($chanson3->duree secondes)<br>";
 
 // procédural 0.4
-echo $chanson['titer'];      // tableau, avec une faute
+echo $chanson['titre'];      // tableau, avec une faute
 // OO
-echo $chanson2->titer;       // objet, avec la même faute
+echo $chanson2->titre;       // objet, avec la même faute
 // Méthode fatale
-$chanson2->afficher();       // cette méthode n'existe pas
+
+// $chanson2->afficher();       // cette méthode n'existe pas
