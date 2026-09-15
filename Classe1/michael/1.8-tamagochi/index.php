@@ -16,10 +16,15 @@ require 'Tamagotchi.php';
     <p><?php $pixel->manger(); echo $pixel->etat()?></p>
     <p>$pixel->jouer(); // +15 de faim</p>
     <p><?php $pixel->jouer(); echo $pixel->etat()?></p>
+    <h2>Bonus 1, entre 0 et 100</h2>
     <p>for($i=0;$i<10;$i++){ $pixel->jouer(); echo $pixel->etat(); }</p>
     <p><?php for($i=0;$i<10;$i++){ $pixel->jouer(); echo $pixel->etat()."<br>"; }?></p>
     <p>for($i=0;$i<10;$i++){ $pixel->manger(); echo $pixel->etat(); }</p>
     <p><?php for($i=0;$i<10;$i++){ $pixel->manger(); echo $pixel->etat()."<br>"; }?></p>
+    <h2>Bonus 2, le __toString()</h2>
+    <p>En cas d'affichage de l'instance</p>
+    <p>echo $pixel</p>
+    <p><?= $pixel ?></p>
 
     <?php var_dump($pixel) ?>
 </body>

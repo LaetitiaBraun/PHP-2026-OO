@@ -12,11 +12,22 @@ class Tamagotchi{
     // méthodes
 
     // constructeur appelé avec le mot clef new avec passage d'un argument
+
+    // méthodes magiques
+
+    // constructeur
     public function __construct(string $name)
     {
         // pour modifier la proprété $nom
         $this->nom = $name;
     }
+    
+    // si on veut représenter une instance de cette classe avec une echo ou un print
+    public function __toString(): string
+    {
+        return "Je me nomme {$this->nom} et je suis une instance de ".self::class;
+    }
+
 
     public function manger(): void
     {
