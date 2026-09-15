@@ -20,51 +20,26 @@ class Playlist{
         $content = "";
         foreach($this->chansons as $chanson){
             // on ajoute le contenu du morceau à la playlist sans les secondes
-<<<<<<< HEAD
-            $content .= "$chanson->titre - $chanson->artiste";
-            // on convertis les secondes avec formaterDuree
-            $temps = $this->formaterDuree($chanson->duree);
-            // on le rajoute à $content
-            $content .= "($temps)<br>";
-            // on ajoute le temps en seconde avec la méthode dureeTotale
-=======
             $content .= "$chanson->titre - $chanson->artiste ";
             // on convertit les secondes avec formaterDuree
             $temps = $this->formaterDuree($chanson->duree);
             // on le rajoute à $content
             $content .= "($temps)<br>";
             // on ajoute le temps en seconde via dureeTotale
->>>>>>> 2a36483762b90fb6347970f6ed2bbda222982d34
             $this->dureeTotale($chanson->duree);
         }
         echo $content;
     }
-<<<<<<< HEAD
-    // compter en seconde le total de temps de la playlist et  envoie le total en seconde
-    public function dureeTotale(int $seconde = 0):int
-    {
-        // on modifie la propriétée $secondesTotal avec les secondes passées en paramètre, $this représente l'instance de Playlist
-=======
     // compter en seconde le total de temps de la playlist et envoie
     // le total en seconde
     public function dureeTotale(int $seconde = 0): int
     {
         // on modifie la propriété $secondesTotal avec les secondes passée
         // en paramètre, $this représente l'instance de Playlist
->>>>>>> 2a36483762b90fb6347970f6ed2bbda222982d34
         $this->secondesTotal += $seconde;
         // on retourne le total des morceaux en secondes
         return $this->secondesTotal;
     }
-<<<<<<< HEAD
-    public function formaterDuree(int $secondes):string
-    {
-        // récupèration des minutes en divisant par les secondes d'une minute
-        $minutes = intdiv($secondes, 60);
-        // conversion en string, si moins de 2 caractères ajout de 0 à gauche STR_PAD_LEFT
-        $minutes = str_pad((string) $minutes, 2, '0', STR_PAD_LEFT);
-        // Modulo des secondes sur 60 nous donne le nombre de secondes restantes
-=======
 
     public function formaterDuree(int $secondes): string
     {
@@ -76,7 +51,6 @@ class Playlist{
         $minutes = str_pad((string) $minutes, 2, '0', STR_PAD_LEFT);
         // Modulo des secondes sur 60 nous donne le nombre de secondes
         // restantes
->>>>>>> 2a36483762b90fb6347970f6ed2bbda222982d34
         $resteSecondes = $secondes % 60;
         // autre méthode, même résultat
         $resteSecondes = ($resteSecondes<10)? "0".$resteSecondes: (string) $resteSecondes;

@@ -6,11 +6,7 @@ require_once "Playlist.php";
 
 // test d'une chanson hors liste
 $chanson_hors_liste = new Chanson("Stairway To Heaven","Led Zeppelin",483);
-<<<<<<< HEAD
-// affichage de celle-ci () Grâce à des propriétés publiques
-=======
 // affichage de celle-ci () grâce à des propriétés publiques
->>>>>>> 2a36483762b90fb6347970f6ed2bbda222982d34
 echo "$chanson_hors_liste->titre — $chanson_hors_liste->artiste ($chanson_hors_liste->duree secondes)<hr>";
 
 /*
@@ -29,10 +25,5 @@ $playlist->ajouter(new Chanson('Redbone', 'Childish Gambino', 327));
 //$playlist->ajouter(new Chanson('Lulu!', 'Abour', 119));
 
 $playlist->afficher();
-<<<<<<< HEAD
-echo "<hr> {$playlist->dureeTotale()}<hr>";
-echo 'Durée totale : ' . $playlist->formaterDuree($playlist->dureeTotale()) . PHP_EOL;
-=======
 echo "<hr> {$playlist->dureeTotale()} secondes<hr>";
 echo "Durée totale :  {$playlist->formaterDuree($playlist->dureeTotale())}";
->>>>>>> 2a36483762b90fb6347970f6ed2bbda222982d34
