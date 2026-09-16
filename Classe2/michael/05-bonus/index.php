@@ -56,21 +56,21 @@ $chanson1 = new Chanson();
 
 // test de l'exercice
 
-echo "<h2>2. Programme de test :<h2>";
+echo "<h2>2. Programme de test :</h2>";
 
 $playlist = new Playlist();
 $song = new Chanson('Bohemian Rhapsody', 'Queen', 355);
 $playlist->ajouter($song);
 $playlist->ajouter(new Chanson('Get Lucky', 'Daft Punk', 248));
 $playlist->ajouter(new Chanson('Redbone', 'Childish Gambino', 327));
-$playlist->ajouter(new Chanson('Beat it', 'Michael Jackson', 27));
+//$playlist->ajouter(new Chanson('Beat it', 'Michael Jackson', 27));
 
 // on voit que ajouter() fonctionne
 // var_dump($playlist);
 
 $playlist->afficher();
 echo "Durée en secondes: {$playlist->dureeTotale()} <br>";
-echo 'Durée totale : ' . $playlist->formaterDuree($playlist->dureeTotale()) . PHP_EOL;
+echo 'Durée totale : ' . $playlist->formaterDuree($playlist->dureeTotale()) . "<hr>";
 
 ?><h2>Résultat attendu :</h2>
 <p>Bohemian Rhapsody — Queen (05:55)<br>
