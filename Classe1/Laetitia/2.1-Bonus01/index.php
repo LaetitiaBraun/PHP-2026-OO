@@ -1,0 +1,14 @@
+<?php
+require_once "Hero.php";
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 - Bonus 01</title>
+</head>
+<body>
+    
+</body>
+</html>
